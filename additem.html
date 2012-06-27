@@ -4,9 +4,42 @@
 	
 	</head>
 		<body>
-			<h1>Diabetes History</h1>
-			<h2>Intended to bring health awareness to younger generations, 
-				this app is a resource for cataloging medical information.</h2>
+		<form action="#" method="post">
+			<fieldset>
+				<legend>Information</legend>
+				<ul>
+					<li><label form="firstName">First Name:</label><input type="text" id="firstName" /></li>
+					<p>
+					<li><label form="lastName">Last Name:</label><input type="text" id="lastName" /></li>
+					<p>
+					<li><label form="age">Age:</label><input type="number" min="0" step="1" id="age" /></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Questions</legend>
+				<ul>
+					<li>How would you describe your eating habits?
+						<ul>
+							<li><input type="radio" value="5" id="5" name="eatHabits" /><label for="5">Much healthier than most</li>
+							<li><input type="radio" value="4" id="4" name="eatHabits" /><label for="4">A little healthier than most</li>
+							<li><input type="radio" value="3" id="3" name="eatHabits" /><label for="3">Average</li>
+							<li><input type="radio" value="2" id="2" name="eatHabits" /><label for="2">A little unhealthier than most</li>
+							<li><input type="radio" value="1" id="1" name="eatHabits" /><label for="1">Much unhealthier than most</li>
+							<p>
+						</ul>
+					</li>
+					<li>How would you describe your exercise habits?
+						<ul>	
+							<li><input type="radio" value="5" id="5" name="eatHabits" /><label for="5">Much more often than most</li>
+							<li><input type="radio" value="4" id="4" name="eatHabits" /><label for="4">A little more often than most</li>
+							<li><input type="radio" value="3" id="3" name="eatHabits" /><label for="3">Average</li>
+							<li><input type="radio" value="2" id="2" name="eatHabits" /><label for="2">A little less often than most</li>
+							<li><input type="radio" value="1" id="1" name="eatHabits" /><label for="1">I don't exercise</li>
+							<p>
+						</ul>
+					</li>
+				</ul>
+				</legend>
 		</body>
 
 </html>
