@@ -14,24 +14,34 @@
 			<h1>Add Your Information</h1>
 			<form action="#" method="post">
 				<fieldset>
-					<legend>Your Information</legend>
+					<legend>Name, Sex, and Age</legend>
 					<ul>
-						<li><label form="firstName">First Name:
-						<br></label><input type="text" id="firstName" /></li>
-						<p>
-						<li><label form="lastName">Last Name:
-						<br></label><input type="text" id="lastName" /></li>
-						<p>
 						<li>
-						</label><input type="range" min="0" max="150" step="1" id="age" onchange="showValue(this.value)" /></li>
-						<label form="age">Your Age:
-							<span id="range">0</span>
-							<script type="text/javascript">
-							function showValue(newValue)
-							{
-								document.getElementById("range").innerHTML=newValue;
-							}
-							</script>
+							<label form="firstName">First Name:</label><br>
+							<input type="text" id="firstName" /></li>
+							<p>
+							<li><label form="lastName">Last Name:
+							<br></label><input type="text" id="lastName" />
+							<p>
+						</li>
+						<li>
+							<label for="sex">Are you male or female?</label><br>
+							<select id="sex">
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
+							</select>
+							<p>
+						</li>
+						<li>
+							<input type="range" min="0" max="150" step="1" id="age" onchange="showValue(this.value)" /></li>
+							<label form="age">Your Age:</label>
+								<span id="range">0</span>
+								<script type="text/javascript">
+								function showValue(newValue)
+								{
+									document.getElementById("range").innerHTML=newValue;
+								}
+								</script>
 					</ul>
 				</fieldset>
 				<fieldset>
@@ -39,37 +49,42 @@
 					<ul>
 						<li>How would you describe your eating habits?
 							<ul>
-								<li><input type="radio" value="5" id="5" name="eatHabits" /><label for="5">Much healthier than most</li>
-								<li><input type="radio" value="4" id="4" name="eatHabits" /><label for="4">A little healthier than most</li>
-								<li><input type="radio" value="3" id="3" name="eatHabits" /><label for="3">Average</li>
-								<li><input type="radio" value="2" id="2" name="eatHabits" /><label for="2">A little unhealthier than most</li>
-								<li><input type="radio" value="1" id="1" name="eatHabits" /><label for="1">Much unhealthier than most</li>
+								<li><input type="radio" value="5" id="5" name="eatHabits" /><label for="5">Much healthier than most</label></li>
+								<li><input type="radio" value="4" id="4" name="eatHabits" /><label for="4">A little healthier than most</label></li>
+								<li><input type="radio" value="3" id="3" name="eatHabits" /><label for="3">Average</label></li>
+								<li><input type="radio" value="2" id="2" name="eatHabits" /><label for="2">A little unhealthier than most</label></li>
+								<li><input type="radio" value="1" id="1" name="eatHabits" /><label for="1">Much unhealthier than most</label></li>
 								<p>
 							</ul>
 						</li>
 						<li>How would you describe your exercise habits?
 							<ul>	
-								<li><input type="radio" value="5" id="5" name="eatHabits" /><label for="5">Much more often than most</li>
-								<li><input type="radio" value="4" id="4" name="eatHabits" /><label for="4">A little more often than most</li>
-								<li><input type="radio" value="3" id="3" name="eatHabits" /><label for="3">Average</li>
-								<li><input type="radio" value="2" id="2" name="eatHabits" /><label for="2">A little less often than most</li>
-								<li><input type="radio" value="1" id="1" name="eatHabits" /><label for="1">I don't exercise</li>
+								<li><input type="radio" value="5" id="5" name="eatHabits" /><label for="5">Much more often than most</label></li>
+								<li><input type="radio" value="4" id="4" name="eatHabits" /><label for="4">A little more often than most</label></li>
+								<li><input type="radio" value="3" id="3" name="eatHabits" /><label for="3">Average</label></li>
+								<li><input type="radio" value="2" id="2" name="eatHabits" /><label for="2">A little less often than most</label></li>
+								<li><input type="radio" value="1" id="1" name="eatHabits" /><label for="1">I don't exercise</label></li>
 								<p>
 							</ul>
 						</li>
 						<li>
-							<label for="diabetes">Do you have diabetes?</label>
+							<label for="diabetes">Do you have diabetes?</label><br>
 							<select id="diabetes">
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 								<option value="One/Both Parents">One or Both Parents</option></select>
 								<p>
 						</li>
-						<li>When was your last medical checkup?
-							<input name="docvisit" type="date">  
+						<li>When was your last medical checkup?<br>
+							<input name="docvisit" type="date" />  
+						</li>
+						<li><label for="comments">How did your medical checkup go?</label><br><textarea id="comments">What did the doctor say?</textarea>
+						</li>
+						<li><input type="hidden" value="true" />
 						</li>
 					</ul>
-					</legend>
-			</body>
-	
+				</fieldset>
+				<input type="submit" value="Submit your health!" />
+			</form>
+		</body>
 	</html>
