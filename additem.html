@@ -8,7 +8,8 @@
 		<meta name="viewport" content="target-densitydpi=device-dpi" />
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="MobileOptimized" content="320" />	
-	
+		<link rel="stylesheet" href="styles.css" />
+
 	</head>
 		<body>
 			<h1>Add Your Information</h1>
@@ -17,20 +18,17 @@
 					<legend>Name, Sex, and Age</legend>
 					<ul>
 						<li>
-							<label form="firstName">First Name:</label><br>
+							<label form="firstName">First Name:</label>
 							<input type="text" id="firstName" /></li>
-							<p>
 							<li><label form="lastName">Last Name:
-							<br></label><input type="text" id="lastName" />
-							<p>
+							</label><input type="text" id="lastName" />
 						</li>
 						<li>
-							<label for="sex">Are you male or female?</label><br>
+							<label form="sex">Are you male or female?</label>
 							<select id="sex">
 								<option value="Male">Male</option>
 								<option value="Female">Female</option>
 							</select>
-							<p>
 						</li>
 						<li>
 							<input type="range" min="0" max="150" step="1" id="age" onchange="showValue(this.value)" /></li>
@@ -54,26 +52,23 @@
 								<li><input type="radio" value="3" id="3" name="eatHabits" /><label for="3">Average</label></li>
 								<li><input type="radio" value="2" id="2" name="eatHabits" /><label for="2">A little unhealthier than most</label></li>
 								<li><input type="radio" value="1" id="1" name="eatHabits" /><label for="1">Much unhealthier than most</label></li>
-								<p>
 							</ul>
 						</li>
 						<li>How would you describe your exercise habits?
 							<ul>	
-								<li><input type="radio" value="5" id="5" name="eatHabits" /><label for="5">Much more often than most</label></li>
-								<li><input type="radio" value="4" id="4" name="eatHabits" /><label for="4">A little more often than most</label></li>
-								<li><input type="radio" value="3" id="3" name="eatHabits" /><label for="3">Average</label></li>
-								<li><input type="radio" value="2" id="2" name="eatHabits" /><label for="2">A little less often than most</label></li>
-								<li><input type="radio" value="1" id="1" name="eatHabits" /><label for="1">I don't exercise</label></li>
-								<p>
+								<li><input type="radio" value="5" id="5" name="exerciseHabits" /><label for="5">Much more often than most</label></li>
+								<li><input type="radio" value="4" id="4" name="exerciseHabits" /><label for="4">A little more often than most</label></li>
+								<li><input type="radio" value="3" id="3" name="exerciseHabits" /><label for="3">Average</label></li>
+								<li><input type="radio" value="2" id="2" name="exerciseHabits" /><label for="2">A little less often than most</label></li>
+								<li><input type="radio" value="1" id="1" name="exerciseHabits" /><label for="1">I don't exercise</label></li>
 							</ul>
 						</li>
 						<li>
-							<label for="diabetes">Do you have diabetes?</label><br>
+							<label form="diabetes">Do you have diabetes?</label><br>
 							<select id="diabetes">
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 								<option value="One/Both Parents">One or Both Parents</option></select>
-								<p>
 						</li>
 						<li>When was your last medical checkup?<br>
 							<input name="docvisit" type="date" />  
