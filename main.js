@@ -4,10 +4,11 @@
 
 // Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function(){
+	alert(localStorage.value(0));
 
 	// getElementById Function
-	function #(x){
-		var the Element = document.getElementById(x);
+	function $(x){
+		var theElement = document.getElementById(x);
 		return theElement;
 	}
 	
@@ -16,10 +17,10 @@ window.addEventListener("DOMContentLoaded", function(){
 		var formTag = document.getElementsByTagName("form"), // formTag is an array of all the form tags.
 			selectLi = $('select'),
 			makeSelect = document.createElement('select');
-			makeSelect.setAttribute("id", "groups");
-		for(var i=0, j=contactGroups.length; i<j; i++){
+			makeSelect.setAttribute("id", "family");
+		for(var i=0, j=familyMemberGroup.length; i<j; i++){
 			var makeOption = document.createElement('option');
-			var optText = contactGroups[i];
+			var optText = familyMemberGroup[i];
 			makeOption.setAttribute("value", optText);
 			makeOption.innerHTML = optText;
 			makeSelect.appendChild(makeOption);
@@ -55,12 +56,13 @@ window.addEventListener("DOMContentLoaded", function(){
 	}		
 				
 	function storeData(){
-		var id				= Math.floor(Math.random()*100000001;)
+		var id				= Math.floor(Math.random()*100000001);
 		// Gather up all our form field values and store in an object.
 		// Object properties contain array with the form label and input value.
 		getSelectedRadio();
 		getCheckboxValue();
 		var item			= {};
+			item.family		= ["Side of Family:", $('family').value];
 			item.firstName	= ["First Name:", $('firstName').value];
 			item.lastName	= ["Last Name:", $('lastName').value];
 			item.age		= ["Age:", $('age').value];
@@ -72,11 +74,12 @@ window.addEventListener("DOMContentLoaded", function(){
 		alert("Data Saved!");
 		
 	}
-	
+
 	// Variable Defaults
-	var contactGroups = ["--Choose A Group--", "Friends", "Family", "Work"],
+	var familyMemberGroup = ["--Choose A Group--", "Paternal", "Maternal", "Immediate"],
 		sexValue,
 		diabetesValue = "No"
+	;
 	makeCats();
 	
 	// Set Link and Submit Click Events
