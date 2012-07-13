@@ -80,15 +80,15 @@ window.addEventListener("DOMContentLoaded", function(){
 		// Object properties contain array with the form label and input value.
 		getSelectedRadio();
 		getCheckboxValue();
-		var item			= {};
-			item.family		= ["Side of Family:", $('family').value];
-			item.firstName	= ["First Name:", $('firstName').value];
-			item.lastName	= ["Last Name:", $('lastName').value];
-			item.age		= ["Age:", $('age').value];
-			item.sex		= ["Sex:", $('sex').Value];
-			item.diabetes	= ["Diabetes:", diabetesValue];
-			item.docVisit	= ["Last Checkup:", $('checkupDate').value];
-			item.comments	= ["Doctor's Comments:", $('comments').value];
+		var item				= {};
+			item.familySelect	= ["Side of Family:", $('familySelect').value];
+			item.firstName		= ["First Name:", $('firstName').value];
+			item.lastName		= ["Last Name:", $('lastName').value];
+			item.age			= ["Age:", $('age').value];
+			item.sex			= ["Sex:", $('sex').value];
+			item.diabetes		= ["Diabetes:", $('diabetes').value];
+			item.docVisit		= ["Last Checkup:", $('docVisit').value];
+			item.comments		= ["Doctor's Comments:", $('comments').value];
 
 
 		// Save data into Local Storage: Use Stringify to convert our object to a string
@@ -99,12 +99,12 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	function getData(){
 		toggleControls("on");
-		if(localStoage.length === 0){
+		if(localStorage.length === 0){
 			alert("There is no data in Local Storage.")
 		}
 		// Write Data from Local Storage to the browser.
 		var makeDiv = document.createElement('div');
-		makediv.setAttribute("id", "items");
+		makeDiv.setAttribute("id", "items");
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
@@ -122,7 +122,7 @@ window.addEventListener("DOMContentLoaded", function(){
 				var makeSubli = document.createElement('li');
 				makeSubList.appendChild(makeSubli);
 				var optSubText = obj[n][0]+" "+obj[n][1];
-				makeSubli.innerHTML = obtSubText;
+				makeSubli.innerHTML = optSubText;
 			}
 		}
 	}
@@ -145,7 +145,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	;
 	makeCats();
 	
-	// Set Link and Submit Click Events
+	// Set Link and Click Events
 
 	var displayLink = $('displayLink');
 	displayLink.addEventListener("click", getData);
