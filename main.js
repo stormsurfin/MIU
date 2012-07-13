@@ -4,7 +4,6 @@
 
 // Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function(){
-	alert(localStorage.value(0));
 
 	// getElementById Function
 	function $(x){
@@ -14,9 +13,9 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	// Create select field element and populate with options.
 	function makeCats(){
-		var formTag = document.getElementsByTagName("form"), // formTag is an array of all the form tags.
-			selectLi = $('select'),
-			makeSelect = document.createElement('select');
+		var formTag = document.getElementsByTagName("form"),
+			selectLi = $('familySelect'),
+			makeSelect = document.createElement('familySelect');
 			makeSelect.setAttribute("id", "family");
 		for(var i=0, j=familyMemberGroup.length; i<j; i++){
 			var makeOption = document.createElement('option');
@@ -54,6 +53,26 @@ window.addEventListener("DOMContentLoaded", function(){
 			diabetesValue = "No"
 		}
 	}
+	
+	function toggleControls(n){
+		switch(n){
+			case "on":
+				$('contactForm').style.display = "none";
+				$('clear').style.display = "inline";
+				$('displayLink').style.display = "none";
+				$('addNew').style.display = "inline";
+				break;
+			case "off":
+				$('contactForm').style.display = "block";
+				$('clear').style.display = "inline";
+				$('displayLink').style.display = "inline";
+				$('addNew').style.display = "none";
+				$('items').style.display = "none";
+				break;
+			default:
+				return false;
+		}
+	}
 
 	function storeData(){
 		var id				= Math.floor(Math.random()*100000001);
@@ -79,12 +98,17 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 
 	function getData(){
+		toggleControls("on");
+		if(localStoage.length === 0){
+			alert("There is no data in Local Storage.")
+		}
 		// Write Data from Local Storage to the browser.
 		var makeDiv = document.createElement('div');
 		makediv.setAttribute("id", "items");
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
+		$('items').style.display = "block";
 		for(var i=0, len=localStorage.length; i<len;i++){
 			var makeli = document.createElement('li');
 			makeList.appendChild(makeli);
@@ -100,6 +124,17 @@ window.addEventListener("DOMContentLoaded", function(){
 				var optSubText = obj[n][0]+" "+obj[n][1];
 				makeSubli.innerHTML = obtSubText;
 			}
+		}
+	}
+
+	function clearLocal(){
+		if(localStorage.length === 0){
+			alert("There is no data to clear.")
+		}else{
+			localStorage.clear();
+			alert("All Data is deleted!");
+			window.location.reload();
+			return false;
 		}
 	}
 
@@ -119,4 +154,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	var save = $('submit');
 	save.addEventListener("click", storeData);
+	
+	
+	
 });
