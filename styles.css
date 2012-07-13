@@ -1,0 +1,46 @@
+/* title: css
+by: Abe Kowitz
+class: Visual Frameworks 1207
+*/
+
+h1 {
+	max-width: 650px;
+	margin: 5px 10px;
+	border: 1px solid red;
+	border-radius: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	font-family: arial;
+	color: white;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	letter-spacing: 12px;
+	text-align: center;
+	background-image: url("https://lh6.googleusercontent.com/-buQz0gN-umI/UABEtw52D-I/AAAAAAAAAO0/gcNltlqzR8A/s400/button.jpg");
+	background-attachment: scroll;
+	background-size: 100% 100%;
+}
+
+h2 {
+	margin: 10px 5px;
+	border: 1px solid red;
+	padding: 10px;
+	font-variant: small-caps;
+	font-size: 14px;
+	background: #0099ff;
+}
+
+ul {
+	margin: 10px 5px;
+	padding: 5px;
+	font-family: "Lucida Grande";
+	line-height: 1.5em;
+
+
+}
+
+legend {
+	font-family: tahoma;
+	color: red;
+	
+}
