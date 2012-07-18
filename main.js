@@ -160,7 +160,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		deleteLink.href = "#";
 		deleteLink.key = key;
 		var deleteText = "Delete Record";
-		//deleteLink.addEventListener("click", deleteItem);
+		deleteLink.addEventListener("click", deleteItem);
 		deleteLink.innerHTML = deleteText;
 		linksLi.appendChild(deleteLink);	
 	}
@@ -180,31 +180,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		var radios = document.forms[0].eatHabits;
 		var radios = document.forms[0].exerciseHabits;
 		for (var i=0; i<radios.length; i++){
-			if(radios(i.value == "a5" && obj.eatHabits[1]) == "a5"){
-				radios[i].setAttribute("checked", "checked");
-			}else if(radios[i].value == "a4" && item.eatHabits[1] == "a4"){
-				radios[i].setAttribute("checked", "checked");			
-			}else if(radios[i].value == "a3" && item.eatHabits[1] == "a3"){
-				radios[i].setAttribute("checked", "checked");			
-			}else if(radios[i].value == "a2" && item.eatHabits[1] == "a2"){
-				radios[i].setAttribute("checked", "checked");			
-			}else if(radios[i].value == "a1" && item.eatHabits[1] == "a1"){
-				radios[i].setAttribute("checked", "checked");
-			}					
-		}
-		for (var i=0; i<radios.length; i++){
-			if(radios(i.value == "b5" && obj.eatHabits[1]) == "b5"){
-				radios[i].setAttribute("checked", "checked");
-			}else if(radios[i].value == "b4" && item.exerciseHabits[1] == "b4"){
-				radios[i].setAttribute("checked", "checked");			
-			}else if(radios[i].value == "b3" && item.exerciseHabits[1] == "b3"){
-				radios[i].setAttribute("checked", "checked");			
-			}else if(radios[i].value == "b2" && item.exerciseHabits[1] == "b2"){
-				radios[i].setAttribute("checked", "checked");			
-			}else if(radios[i].value == "b1" && item.exerciseHabits[1] == "b1"){
-				radios[i].setAttribute("checked", "checked");
+			if(radios[i].value === item.eatHabits[1]);
 			}
-		}				
+						
+		for (var i=0; i<radios.length; i++){
+			if(radios[i].value === item.exerciseHabits[1]);
+			}
+				
 		$('age').value = item.age[1];
 		$('sex').value = item.sex[1];
 		$('diabetes').value = item.diabetes[1];
@@ -220,6 +202,16 @@ window.addEventListener("DOMContentLoaded", function(){
 		// so we can use that value when we save the data we edited.
 		editSubmit.addEventListener("click", validate);
 		editSubmit.key = this.key;
+	}	
+	
+	function deleteItem(){
+		var ask = confirm("Are you sure you want to delete this record?");
+		if(ask){
+			localStorage.removeItem(this.key);
+			window.location.reload();
+		}else{
+			alert("Record was not deleted!");
+		}
 	}
 	
 	function clearLocal(){
@@ -280,8 +272,15 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	// Variable Defaults
 	var familyMemberGroup = ["Paternal", "Maternal", "Immediate"],
+		age,
 		sexValue,
+		eatHabitsValue,
+		exerciseHabitsValue,
 		diabetesValue = "No",
+		comments,
+		firstName,
+		lastName,
+		docVisit,
 		errMsg = $('errors');
 	;
 	makeCats();
@@ -295,5 +294,4 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	var save = $('submit');
 	save.addEventListener("click", validate);
-	
 });
