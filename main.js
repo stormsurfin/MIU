@@ -272,7 +272,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			messageAry.push(eatHabitsError);
 		}
 
-		if(getExerciseHabits === "b3"){
+		if(getExerciseHabits === ""){
 			var exerciseHabitsError = "Please select your exercise habits."
 			getExerciseHabits.style.border = "1px solid red";
 			messageAry.push(exerciseHabitsError);
