@@ -148,7 +148,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		editLink.href = '#';
 		editLink.key = key;
 		var editText = "Edit Record";
-		//editLink.addEventListener("click", editItem);
+		editLink.addEventListener("click", editItem);
 		editLink.innerHTML = editText;
 		linksLi.appendChild(editLink);
 		
