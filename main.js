@@ -228,14 +228,18 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	function validate(e){
 		// Define the elements we want to check
-		var getFamilySelect = $('familySelect');
 		var getFirstName = $('firstName');
 		var getLastName = $('lastName');
+		var getAge = $('age');
+		var getEatHabits = $('eatHabits');
+		var getExerciseHabits = $('exerciseHabits');
+		var getDocVisit = $('docVisit');
+		var getComments = $('comments');
 		
 		// Reset Error Messages
 		errMsg.innerHTML = "";
-		getFirstName.style.border = "1px solid black;"
-		getLastName.style.border = "1px solid black;"
+		getFirstName.style.border = "1px solid black";
+		getLastName.style.border = "1px solid black";
 		
 		
 		// Get Error Messages
@@ -244,17 +248,50 @@ window.addEventListener("DOMContentLoaded", function(){
 		// First Name Validation
 		if(getFirstName.value === ""){
 			var fNameError = "Please enter a first name."
-			getFirstName.style.border = "1px solid red;"
+			getFirstName.style.border = "1px solid red";
 			messageAry.push(fNameError);
-		}
-		
+		}	
+
 		// Last Name Validation
 		if(getLastName.value === ""){
 			var lNameError = "Please enter a last name."
-			getLastName.style.border = "1px solid red;"
+			getLastName.style.border = "1px solid red";
 			messageAry.push(lNameError);
-		}	
-	
+		}
+
+		// Age Validation
+		if(getAge.value === ""){
+			var ageError = "Please enter your age."
+			getAge.style.border = "1px solid red";
+			messageAry.push(ageError);
+		}
+		
+		if(getEatHabits === "checked"){
+			var eatHabitsError = "Please select your eating habits."
+			getEatHabits.style.border = "1px solid red";
+			messageAry.push(eatHabitsError);
+		}
+
+		if(getExerciseHabits === "b3"){
+			var exerciseHabitsError = "Please select your exercise habits."
+			getExerciseHabits.style.border = "1px solid red";
+			messageAry.push(exerciseHabitsError);
+		}
+				
+		// Doctor's Visit Validation
+		if(getDocVisit.value === ""){
+			var docVisitError = "Please enter the date of your last doctor's visit."
+			getDocVisit.style.border = "1px solid red;"
+			messageAry.push(docVisitError);
+		}
+		
+		// Comments Validation
+		if(getComments.value === "What did the doctor say?"){
+			var commentsError = "Please enter info about your medical checkup."
+			getComments.style.border = "1px solid red;"
+			messageAry.push(commentsError);
+		}		
+					
 		// If there were errors, display them on the screen
 		if(messageAry.length >= 1){
 			for(var i=0, j=messageAry.length; i < j; i++){
