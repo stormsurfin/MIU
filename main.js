@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 
 	// Find value of selected radio button.
-	function getSelectedRadio(){
+	function getSelectedEatRadio(){
 		var radios = document.forms[0].eatHabits;
 		for(var i = 0; i<radios.length; i++){
 			if(radios[i].checked){
@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 
-	function getSelectedRadio(){
+	function getSelectedExerciseRadio(){
 		var radios = document.forms[0].exerciseHabits;
 		for(var i=0; i<radios.length; i++){
 			if(radios[i].checked){
@@ -86,7 +86,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 		// Gather up all our form field values and store in an object.
 		// Object properties contain array with the form label and input value.
-		getSelectedRadio();
+		getSelectedEatRadio();
+		getSelectedExerciseRadio();
 		getCheckboxValue();
 		var item				= {};
 			item.familySelect	= ["Side of Family:", $('familySelect').value];
