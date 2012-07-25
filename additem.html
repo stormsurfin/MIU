@@ -9,7 +9,8 @@
 		<meta name="viewport" content="userscalable=no, witdh=device-width" />
 		<meta name="viewport" content="target-densitydpi=device-dpi" />
 		<meta name="HandheldFriendly" content="True" />
-		<meta name="MobileOptimized" content="320" />	
+		<meta name="MobileOptimized" content="320" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 	
 		<link rel="stylesheet" href="styles.css" />
 
 	</head>
@@ -34,15 +35,14 @@
 							</select>
 						</li>
 						<li>
-							<input type="range" min="0" max="150" step="1" id="age" onchange="showValue(this.value)" /></li>
 							<label form="age">Your Age:</label>
+							<input type="range" min="0" max="125" step="1" id="age" onchange="showValue(this.value)" />
 								<span id="range">0</span>
 								<script type="text/javascript">
-								function showValue(newValue)
-								{
+								function showValue(newValue){
 									document.getElementById("range").innerHTML=newValue;
 								};
-								</script>
+								</script></li>
 						<li>
 							<label form="familySelect">What side of the family are you from?</label>
 							<select id="familySelect">
@@ -55,8 +55,7 @@
 				</fieldset>
 				<fieldset>
 					<legend>Questions</legend>
-					<ul>
-						<li>How would you describe your eating habits?
+					<ul><li>How would you describe your eating habits?</li>
 							<ul>
 								<li><input type="radio" value="Much healthier than most" id="a5" name="eatHabits" /><label for="5">Much healthier than most</label></li>
 								<li><input type="radio" value="A little healthier than most" id="a4" name="eatHabits" /><label for="4">A little healthier than most</label></li>
@@ -64,8 +63,8 @@
 								<li><input type="radio" value="A little unhealthier than most" id="a2" name="eatHabits" /><label for="2">A little unhealthier than most</label></li>
 								<li><input type="radio" value="Much unhealthier than most" id="a1" name="eatHabits" /><label for="1">Much unhealthier than most</label></li>
 							</ul>
-						</li>
-						<li>How would you describe your exercise habits?
+						
+						<li>How would you describe your exercise habits?</li>
 							<ul>	
 								<li><input type="radio" value="Much more often than most" id="b5" name="exerciseHabits" /><label for="5">Much more often than most</label></li>
 								<li><input type="radio" value="A little more often than most" id="b4" name="exerciseHabits" /><label for="4">A little more often than most</label></li>
@@ -73,7 +72,7 @@
 								<li><input type="radio" value="A little less often than most" id="b2" name="exerciseHabits" /><label for="2">A little less often than most</label></li>
 								<li><input type="radio" value="I don't exercise" id="b1" name="exerciseHabits" /><label for="1">I don't exercise</label></li>
 							</ul>
-						</li>
+						
 						<li>
 							<label form="diabetes">Do you have diabetes?</label><br>
 							<select id="diabetes">
@@ -81,13 +80,13 @@
 								<option value="No">No</option>
 								<option value="One/Both Parents">One or Both Parents</option></select>
 						</li>
-						<li>When was your last medical checkup?<br>
+						<li>When was your last medical checkup?</li>
 							<input name="docVisit" id="docVisit" type="date" />  
 						</li>
 						<li><label for="comments">How did your medical checkup go?</label><br><textarea id="comments">What did the doctor say?</textarea>
 						</li>
 						<li><input type="hidden" value="true" />
-						</li>
+						
 					</ul>
 				</fieldset>
 				<input type="button" id="submit" value="Submit your health!" />
@@ -96,6 +95,7 @@
 				<a href="#" id="addNew">New Family Member</a>
 
 			</form>
+			<script src="json.js" type="text/javascript"></script>
 			<script src="main.js" type="text/javascript"></script>
 		</body>
 	</html>

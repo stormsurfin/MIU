@@ -2,9 +2,28 @@
 by: Abe Kowitz
 class: Visual Frameworks 1207
 */
-
-h1 {
+html {
 	max-width: 650px;
+	padding:10px;
+	background-color:black;
+	background-image: url("https://sphotos-a.xx.fbcdn.net/hphotos-snc6/269717_10150254162933977_3252859_n.jpg");
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+body {
+	background-color:white;
+	padding: 10px;
+	border-radius: 30px;
+	box-shadow: -10px 10px 5px gray;
+
+}
+ 
+h1 {
+	max-width: 400px;
 	margin: 5px 10px;
 	border: 1px solid red;
 	border-radius: 15px;
@@ -16,9 +35,11 @@ h1 {
 	text-shadow: black 0.1em 0.1em 0.2em;
 	letter-spacing: 12px;
 	text-align: center;
-	background-image: url("https://lh6.googleusercontent.com/-buQz0gN-umI/UABEtw52D-I/AAAAAAAAAO0/gcNltlqzR8A/s400/button.jpg");
+	background-image: url("https://lh5.googleusercontent.com/-ZkCpSmi8ntU/UABKtqN3bII/AAAAAAAAAP8/fgGzNSyd0Mk/s0-d/Wailua%2BRainbows.jpg");
 	background-attachment: scroll;
-	background-size: 100% 100%;
+	background-size: 125% 100%;
+	box-shadow: -5px 5px 5px gray;
+
 }
 
 h2 {
@@ -28,14 +49,16 @@ h2 {
 	font-variant: small-caps;
 	font-size: 14px;
 	background: #0099ff;
+
 }
 
-ul {
-	margin: 10px 5px;
+li {
+	margin: 10px 15px;
 	padding: 5px;
 	font-family: "Lucida Grande";
 	line-height: 1.5em;
-
+	background-color: white;
+	list-style-type: none;
 
 }
 
