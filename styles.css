@@ -3,10 +3,8 @@ by: Abe Kowitz
 class: Visual Frameworks 1207
 */
 html {
-	max-width: 650px;
 	padding:10px;
-	background-color:black;
-	background-image: url("https://sphotos-a.xx.fbcdn.net/hphotos-snc6/269717_10150254162933977_3252859_n.jpg");
+	background-color:gray;
 	background-attachment: fixed;
 	background-size: 100% 100%;
 	margin-left: auto;
@@ -23,21 +21,17 @@ body {
 }
  
 h1 {
-	max-width: 400px;
+	max-width: 90%;
 	margin: 5px 10px;
 	border: 1px solid red;
 	border-radius: 15px;
+	background-color: #0099ff;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 10px;
+	padding: 8px;
 	font-family: arial;
-	color: white;
-	text-shadow: black 0.1em 0.1em 0.2em;
 	letter-spacing: 12px;
 	text-align: center;
-	background-image: url("https://lh5.googleusercontent.com/-ZkCpSmi8ntU/UABKtqN3bII/AAAAAAAAAP8/fgGzNSyd0Mk/s0-d/Wailua%2BRainbows.jpg");
-	background-attachment: scroll;
-	background-size: 125% 100%;
 	box-shadow: -5px 5px 5px gray;
 
 }
@@ -47,7 +41,8 @@ h2 {
 	border: 1px solid red;
 	padding: 10px;
 	font-variant: small-caps;
-	font-size: 14px;
+	font-size: large;
+	border-radius: 15px;
 	background: #0099ff;
 
 }
@@ -62,8 +57,19 @@ li {
 
 }
 
+h3 {
+	margin: 10px 5px;
+	border: 1px solid red;
+	padding: 10px;
+	font-variant: small-caps;
+	font-size: x-large;
+	border-radius: 15px;
+	background: #0099ff;
+
+}
+
 legend {
 	font-family: tahoma;
-	color: red;
-	
+	font-size: x-large;
+	color: red;	
 }
