@@ -18,7 +18,13 @@
 		<h2>Intended to bring health awareness to younger generations, 
 			this app is a resource for cataloging medical information.</h2>			
 			<body>
-			
+			<div id="navmenu"> 
+			<ul>
+				<form action="search.php" method="get"> 
+				<input type="text" name="query" id="query" size="35" value=""> 
+				<input type="submit" value="Search"> 
+				<input type="hidden" name="search" value="1"> 
+				</form> 
 			<button type="button" onclick="redirect()">ADD A PIECE OF MEDICAL HISTORY</button>
 				<script type="text/javascript">
 				function redirect()
@@ -26,12 +32,7 @@
 				window.location="additem.html";
 				};
 				</script>
-			<div> 
-				<form action="search.php" method="get"> 
-				<input type="text" name="query" id="query" size="35" value=""> 
-				<input type="submit" value="Search"> 
-				<input type="hidden" name="search" value="1"> 
-				</form> 
+			</ul>
 			</div> 
 			<div>
 				<h3>Already have your family's data stored? Browse it below!</h3><br>

@@ -73,3 +73,8 @@ legend {
 	font-size: x-large;
 	color: red;	
 }
+
+#navmenu ul {
+	display: inline;
+	}
+
