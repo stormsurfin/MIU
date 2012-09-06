@@ -1,7 +1,9 @@
 // Activity 2
 // Visual Frameworks 1207
 // Abraham Kowitz
-
+window.addEventListener('load', function() {
+    setTimeout(scrollTo, 0, 0, 1);
+}, false);
 // Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function(){
 
@@ -353,4 +355,6 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	var save = $('submit');
 	save.addEventListener("click", validate);
+	
+	
 });
