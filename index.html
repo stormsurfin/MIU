@@ -1,51 +1,74 @@
-<!Abraham Kowitz VFW Project 2 1207>
+<!Abraham Kowitz MIU 1209>
 
 <!doctype html>
 <html>
 	<head>	
 		<meta name="keywords" content="medical history, family medical history, diabetes, future family health" />
 		<meta name="description" content="Intended to bring health awareness to younger generations, this app is a resource for cataloging medical information." />
-		<meta name="robots" content="noindex, nofollow" />
-		<meta name="viewport" content="userscalable=no, witdh=device-width" />
-		<meta name="viewport" content="target-densitydpi=device-dpi" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="MobileOptimized" content="320" />
 		<title>Your Family History</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
 		<link rel="stylesheet" href="styles.css" />
+		<script src="js/libs/modernizr.custom.min.js"></script>
+
 	</head>
-		<h1>Diabetes History</h1>
-		<img src="CTA.jpg" width=100%></img>
-		<h2>Intended to bring health awareness to younger generations, 
-			this app is a resource for cataloging medical information.</h2>			
-			<body>
-			<div id="navmenu"> 
-			<ul>
-				<form action="search.php" method="get"> 
-				<input type="text" name="query" id="query" size="35" value=""> 
-				<input type="submit" value="Search"> 
-				<input type="hidden" name="search" value="1"> 
-				</form> 
-			</ul>
-			<ul>
-			<button type="button" onclick="redirect()">ADD A PIECE OF MEDICAL HISTORY</button>
-				<script type="text/javascript">
-				function redirect()
-				{
-				window.location="additem.html";
-				};
-				</script>
-			</ul>
-			</div> 
-			<div>
-				<h3>Already have your family's data stored? Browse it below!</h3><br>
-					<a href="#" id="diabetes">Diabetes</a><br>
-					<a href="#" id="sex">Sex</a><br>
-					<a href="#" id="docVisit">Medical Checkup Date</a><br>
-					<a href="#" id="familySelect">View a side of your family</a><br>
-					<a href="#" id="eatHabits">Eating Habits</a><br>
-					<a href="#" id="exerciseHabits">Exercise Habits</a><br>
-			<script src="json.js" type="text/javascript"></script>		
-			</body>
+	<body>
+		<div data-role="page" id="home">
+		
+			<div data-role="header" data-position="fixed" data-theme="e">
+				<h1>Family History</h1>
+				<img src="CTA.jpg" width=100%></img>
+			</div>
+			<div data-role="content">
+				<p>Intended to bring health awareness to younger generations, this app is a resource for cataloging medical information.</p>
+				<p><a href="additem.html" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">ADD A PIECE OF MEDICAL HISTORY</a></p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Footer</h4>
+			</div>	
+		
+		</div>
+
+		<div data-role="page" id="home">
+			<div data-role="header" data-position="fixed" data-theme="e">
+				<h1>Diabetes History</h1>
+
+			</div>
+			<div data-role="content">
+			<p></p>
+			<p><a href="#second" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right">Home Page</a></p>			
+			</div>
+				<div id="navmenu"> 
+				<ul>
+					<form action="search.php" method="get"> 
+					<input type="text" name="query" id="query" size="35" value=""> 
+					<input type="submit" value="Search"> 
+					<input type="hidden" name="search" value="1"> 
+					</form> 
+				</ul>
+				<ul>
+				<button type="button" onclick="redirect()">ADD A PIECE OF MEDICAL HISTORY</button>
+					<script type="text/javascript">
+					function redirect()
+					{
+					window.location="additem.html";
+					};
+					</script>
+				</ul>
+				</div> 
+				<div>
+					<h3>Already have your family's data stored? Browse it below!</h3><br>
+						<a href="#" id="diabetes">Diabetes</a><br>
+						<a href="#" id="sex">Sex</a><br>
+						<a href="#" id="docVisit">Medical Checkup Date</a><br>
+						<a href="#" id="familySelect">View a side of your family</a><br>
+						<a href="#" id="eatHabits">Eating Habits</a><br>
+						<a href="#" id="exerciseHabits">Exercise Habits</a><br>
+				<script src="json.js" type="text/javascript"></script>	
+		</div>	
+		</body>
 
 </html>
 
